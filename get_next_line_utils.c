@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:59:00 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/07 15:47:41 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:58:41 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,20 @@ char	*ft_substr(char const *src, size_t begin, size_t end)
 	}
 	ptr[i] = 0;
 	return (ptr);
+}
+
+char	*ft_finish(char *nl, char *prev_buf)
+{
+	char	*ret_string;
+	char	*new_str;
+	size_t	i;
+
+	ret_string = ft_substr(prev_buf, 0, ft_strlen(src));
+	i = 0;
+	while (prev_buf[i])
+		i++;
+	new_str = ft_substr(prev_buf, ft_strlen(src) - i, i);
+	free(prev_buf);
+	prev_buf = new_str;
+	return (ret_string);
 }

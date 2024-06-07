@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 15:03:13 by htrindad          #+#    #+#             */
-/*   Updated: 2024/06/07 15:37:12 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:53:14 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@
 size_t	ft_strlen(char const *str);
 char	*ft_strjoin(char *dest, char const *src);
 char	*ft_strdup(char const *str);
+char	*ft_substr(char const *src, size_t begin, size_t end);
+char	*ft_finish(char *nl, char *prev_buf);
 
 #endif
